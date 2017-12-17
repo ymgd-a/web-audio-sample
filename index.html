@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Wavを描く</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bin-reader.js"></script>
+    <script src="js/wav-reader.js"></script>
+    <script src="js/audio-visualiser.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- 読み込み中 -->
+    <div id="curtain">
+      <div class="loading-box">
+        <div class="loading"></div>
+      </div>
+    </div>
+
+    <!-- 入力 -->
+    <div class="caption">入力</div>
+    <div class="panel audio-in">
+      <div class="file-wrapper">
+        <input type="file" id="wav-file">
+      </div>
+    </div>
+    
+    <!-- トラック一覧 -->
+    <div class="caption">トラック</div>
+    <div class="panel audio-track">
+    </div>
+
+    <!-- 出力 -->
+    <div class="caption">出力</div>
+    <div class="panel audio-out">
+      <button id="play-btn">Play</button>
+      <canvas id="wav-view"></canvas>
+      <canvas id="freq-view"></canvas>
+    </div>
+
+  </body>
+</html>
