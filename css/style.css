@@ -4,6 +4,10 @@ body {
   color: #fff;
 }
 
+a {
+  color: #48f;
+}
+
 .panel {
   padding: 20px;
   margin: 0px 10px;
