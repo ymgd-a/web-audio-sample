@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #48f;
+  color: #f90;
 }
 
 .panel {
@@ -13,6 +13,11 @@ a {
   margin: 0px 10px;
   border-radius: 2px;
   background: #333;
+}
+
+.pop {
+  text-align: center;
+  background: #555;
 }
 
 .caption {
