@@ -1,40 +1,45 @@
 <!Doctype html>
 <html>
   <head>
-    <title>Wavを描く</title>
+    <title>Daw</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/bin-reader.js"></script>
-    <script src="js/wav-reader.js"></script>
     <script src="js/audio-visualiser.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/daw.js"></script>
+    <script>
+      // DAWインスタンス生成
+      window.onload = () => {
+        let daw = new Daw();
+      };
+    </script>
   </head>
 
   <body>
-    <!-- 読み込み中 -->
+    <!-- カーテン -->
     <div id="curtain">
       <div class="loading-box">
         <div class="loading"></div>
+        <div class="loading-msg"></div>
       </div>
     </div>
 
     <!-- 入力 -->
-    <div class="caption">入力</div>
+    <div class="caption">入力（複数ファイル選択可能）</div>
     <div class="panel audio-in">
       <div class="file-wrapper">
-        <input type="file" id="wav-file">
+        <input type="file" id="wav-file" multiple>
       </div>
     </div>
     
-    <!-- トラック一覧 -->
-    <div class="caption">トラック</div>
-    <div class="panel audio-track">
+    <!-- トラックリスト -->
+    <div class="caption">トラックリスト（クリックでミュートON/OFF）</div>
+    <div class="panel audio-tracks">
     </div>
 
     <!-- 出力 -->
     <div class="caption">出力</div>
     <div class="panel audio-out">
-      <button id="play-btn">Play</button>
+      <button id="play-btn">再生</button><span>ミュート ON / OFF を反映させるには一度停止させます</span>
       <canvas id="wav-view"></canvas>
       <canvas id="freq-view"></canvas>
     </div>

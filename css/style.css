@@ -1,17 +1,17 @@
 body {
   margin: 0px;
-  background: #eee;
+  background: #222;
+  color: #fff;
 }
 
 .panel {
   padding: 20px;
   margin: 0px 10px;
   border-radius: 2px;
-  background: #fff;
+  background: #333;
 }
 
 .caption {
-  color: #777;
   margin: 10px;
   margin-bottom: 0px;
 }
@@ -28,7 +28,8 @@ canvas {
 #wav-view, #freq-view {
   margin: 10px 0px;
   height: 120px;
-  border: 1px dotted #ccc;
+  border: 1px solid #111;
+  background: #222;
 }
 
 #curtain {
@@ -68,6 +69,22 @@ canvas {
   display: block;
   margin-left: 35px;
   margin-top: -10px;
+}
+
+.track {
+  line-height: 26px;
+  padding: 0px 20px;
+  margin: 2px 0px;
+  border-radius: 2px;
+  background: #d70;
+  font-size: small;
+  color: #fff;
+  cursor: pointer;
+}
+
+.track.muted {
+  background: #555;
+  color: #999;
 }
 
 @keyframes rotate{
